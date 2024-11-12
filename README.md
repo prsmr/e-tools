@@ -2,27 +2,17 @@
 
 ## What is E-TOOLS?
 
-E-Tools is 
+E-Tools is a simple web app with useful tools for anyone working in electrical engineering. 
 
-## Project setup
-```
-npm install
-```
+It is inspired by the [IT-Tool](https://github.com/CorentinTh/it-tools) collection from [CorentinTh](https://github.com/CorentinTh/).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Roadmap
+- voltage drop calculation
+- cable calculation
+- transformer vector groups
+- short circuit current calculation
+- power calculation for 3-phase AC, AC and DC
+- some calculations for solar power systems
+- language selector
+- design improvements
+- search bar
