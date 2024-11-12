@@ -1,7 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
+
+// views
 import HomePage from '../views/HomePage.vue';
 import ToolPage from '../views/ToolPage.vue';
 import AboutPage from '../views/AboutPage.vue';
+
+// Tools
+// import PowerCalculation from '../tools/PowerCalculation.vue';
 
 const routes = [
   {
@@ -17,9 +22,9 @@ const routes = [
   {
     path: '/tool/:toolId',
     name: 'ToolPage',
-    component: ToolPage, // Toolpage with param :toolId
+    component: ToolPage,
     props: true,
-  },
+  }
 ];
 
 const router = createRouter({

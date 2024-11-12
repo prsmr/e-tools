@@ -8,7 +8,17 @@
         @toggleDarkMode="toggleDarkMode"
       />
       <div class="tools-grid">
-        Hallo
+        <div class="container">
+          <h2>Was ist E-TOOLS?</h2>
+          E-Tools ist eine Sammlung von kleinen Skripten, um Elektrotechniker*innen bei der täglichen Arbeit zu helfen.
+          <br /><br />
+          Inspiriert wurde die Toolsammlung von den <a href="https://it-tools.tech" target="_blank">IT-Tools</a> vnn <a href="https://github.com/CorentinTh" target="_blank">CorentinTh</a>, die ich so nützlich wie genial finde, dass ich sie für mich und meinen Berufszweig adaptieren musste. 
+          
+          <h2>Helfen?</h2>
+          Immer gerne.
+          <br />
+          Wenn dir ein nützliches Tool fehlt, du einen Fehler gefunden hast oder andere Verbesserungsvorschläge machen möchtest, dann erstelle gerne ein <a href="https://github.com/prsmr/e-tools/issues/new" target="_blank">Issue auf GitHub</a>.
+        </div>
       </div>
     </main>
   </div>
@@ -23,45 +33,6 @@ export default {
     return {
       isDarkMode: false,
       isSidebarCollapsed: false,
-      categories: [
-        {
-          name: 'Grundlagen',
-          isCollapsed: false,
-          tools: [
-            { name: 'Spannungsfallberechnung', description: 'Berechnung des Spannungsfalls', icon: 'fas fa-voltmeter' },
-            { name: 'Kabeldimensionierung', description: 'Dimensionierung von Kabeln und Leitungen', icon: 'fas fa-voltmeter' },
-            { name: 'Leistungsberechnung', description: 'Berechnung der elektrischen Leistung', icon: 'fas fa-bolt' },
-            { name: 'Kurzschlussstromberechnung', description: 'Berechnung des Kurzschlussstroms', icon: 'fas fa-plug' }
-          ]
-        },
-        {
-          name: 'Mittelspannung',
-          isCollapsed: false,
-          tools: [
-            { name: 'Schaltgruppen', description: 'Gängige Schaltgruppen von Transformatoren', icon: 'fas fa-wave-square' },
-            { name: ' ', description: ' ', icon: 'fas fa-tachometer-alt' },
-            { name: ' ', description: ' ', icon: 'fas fa-random' }
-          ]
-        },
-        {
-          name: 'Brandmeldetechnik',
-          isCollapsed: false,
-          tools: [
-            { name: 'BMA Cheat Sheet', description: ' ', icon: 'fas fa-wave-square' },
-            { name: '0,6 Regel', description: ' ', icon: 'fas fa-tachometer-alt' },
-            { name: ' ', description: ' ', icon: 'fas fa-random' }
-          ]
-        },
-        {
-          name: 'Datentechnik',
-          isCollapsed: false,
-          tools: [
-            { name: ' ', description: ' ', icon: 'fas fa-wave-square' },
-            { name: ' ', description: ' ', icon: 'fas fa-tachometer-alt' },
-            { name: ' ', description: ' ', icon: 'fas fa-random' }
-          ]
-        }           
-      ]
     };
   },
   methods: {
@@ -77,3 +48,24 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.tools-grid {
+  display: flex;
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+  gap: 40px;
+  padding: 20px;
+}
+
+.container {
+  width: 30%;
+  text-align: justify;
+  padding: 20px;
+  border: 0px;
+}
+
+.tools-grid a {
+  text-decoration: none;
+}
+</style>

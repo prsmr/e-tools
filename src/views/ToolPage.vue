@@ -8,9 +8,11 @@
         @toggleDarkMode="toggleDarkMode"
       />
       <div class="tool-page">
-        <h1>{{ toolId }} - Tool Details</h1>
-        <p>Hier können Sie das Tool {{ toolId }} benutzen.</p>
-        <!-- Tool-spezifischer Inhalt wird hier angezeigt -->
+        <div class="container">
+          <h1>{{ toolId }}</h1>
+          <p>Hier können Sie das Tool {{ toolId }} benutzen.</p>
+
+        </div>
       </div>
     </main>
   </div>
@@ -28,7 +30,6 @@ export default {
   },
   computed: {
     toolId() {
-      // Der Parameter wird aus der Route extrahiert
       return this.$route.params.toolId;
     }
   },
@@ -46,5 +47,19 @@ export default {
 <style scoped>
 .tool-page {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 60%;
+  text-align: justify;
+  padding: 20px;
+  border: 1px solid #fff;
+}
+
+ .container h1 {
+  text-decoration: underline;
 }
 </style>
