@@ -9,7 +9,8 @@
 export default {
   name: 'ToolTile',
   props: {
-    tool: Object
+    tool: Object,
+    isDarkMode: Boolean
   }
 };
 </script>

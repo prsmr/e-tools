@@ -8,7 +8,7 @@
         @toggleDarkMode="toggleDarkMode"
       />
       <div class="tools-grid">
-        <div v-for="(category, index) in categories" :key="index" class="category-section">
+        <div v-for="(category, index) in categories" :key="index" class="category" >
           <div class="category-header" @click="toggleCategory(index)">
             <h2>{{ category.name }}</h2>
             <span class="toggle-icon">{{ category.isCollapsed ? '▼' : '▲' }}</span>
@@ -51,20 +51,39 @@ export default {
           name: 'Grundlagen',
           isCollapsed: false,
           tools: [
-            { name: 'hallo', description: 'Berechnung des Widerstands', icon: 'fas fa-voltmeter' },
+            { name: 'Spannungsfallberechnung', description: 'Berechnung des Spannungsfalls', icon: 'fas fa-voltmeter' },
+            { name: 'Kabeldimensionierung', description: 'Dimensionierung von Kabeln und Leitungen', icon: 'fas fa-voltmeter' },
             { name: 'Leistungsberechnung', description: 'Berechnung der elektrischen Leistung', icon: 'fas fa-bolt' },
-            { name: 'Kurzschlussstromberechnung', description: 'Widerstand eines Bauteils', icon: 'fas fa-plug' }
+            { name: 'Kurzschlussstromberechnung', description: 'Berechnung des Kurzschlussstroms', icon: 'fas fa-plug' }
           ]
         },
         {
-          name: 'Messgeräte',
+          name: 'Mittelspannung',
           isCollapsed: false,
           tools: [
-            { name: 'Oszilloskop', description: 'Visualisierung von Signalwellen', icon: 'fas fa-wave-square' },
-            { name: 'Multimeter', description: 'Messung von Spannung, Strom und Widerstand', icon: 'fas fa-tachometer-alt' },
-            { name: 'Frequenzgenerator', description: 'Erzeugung von Testfrequenzen', icon: 'fas fa-random' }
+            { name: 'Schaltgruppen', description: 'Gängige Schaltgruppen von Transformatoren', icon: 'fas fa-wave-square' },
+            { name: ' ', description: ' ', icon: 'fas fa-tachometer-alt' },
+            { name: ' ', description: ' ', icon: 'fas fa-random' }
           ]
-        }
+        },
+        {
+          name: 'Brandmeldetechnik',
+          isCollapsed: false,
+          tools: [
+            { name: 'BMA Cheat Sheet', description: ' ', icon: 'fas fa-wave-square' },
+            { name: '0,6 Regel', description: ' ', icon: 'fas fa-tachometer-alt' },
+            { name: ' ', description: ' ', icon: 'fas fa-random' }
+          ]
+        },
+        {
+          name: 'Datentechnik',
+          isCollapsed: false,
+          tools: [
+            { name: ' ', description: ' ', icon: 'fas fa-wave-square' },
+            { name: ' ', description: ' ', icon: 'fas fa-tachometer-alt' },
+            { name: ' ', description: ' ', icon: 'fas fa-random' }
+          ]
+        }           
       ]
     };
   },
@@ -89,6 +108,20 @@ export default {
   flex-direction: column;
   gap: 40px;
   padding: 20px;
+}
+
+/*.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}*/
+
+.tools-grid a {
+  text-decoration: none;
+}
+
+.category {
+  margin-bottom: 30px;
 }
 
 .category-section {
@@ -124,7 +157,7 @@ export default {
 
 .tool-tile {
   background-color: var(--tile-bg);
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   border: 1px solid #ccc;
   transition: border 0.3s;
@@ -161,4 +194,11 @@ router-link {
   text-decoration: none;
   color: inherit;
 }
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Kacheln nebeneinander auf Standardbildschirm */
+  gap: 20px; /* Gleicher Abstand horizontal und vertikal */
+}
+
 </style>

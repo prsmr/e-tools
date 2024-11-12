@@ -1,6 +1,6 @@
 <template>
   <aside :class="{ collapsed: isCollapsed, 'sidebar': true }">
-    <div class="logo"><img src="../assets/logo.png" style="width:100%;height:100%;" /></div>
+    <div class="logo"><img src="../assets/logo.webp" style="width:100%;height:100%;" /></div>
     <nav>
       <ul>
         <li
@@ -76,7 +76,7 @@ export default {
 
 .logo {
   font-size: 1.0rem;
-  padding: 80px;
+  padding: 10px;
   text-align: center;
 }
 

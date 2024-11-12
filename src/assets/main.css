@@ -24,7 +24,7 @@
 /* Grundlegendes Layout */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: var(--main-content-bg);
   color: var(--header-text);
 }

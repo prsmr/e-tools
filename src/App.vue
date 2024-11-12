@@ -7,9 +7,8 @@
         @toggleDarkMode="toggleDarkMode" 
         @toggleSidebar="toggleSidebar"
       />
-      <main class="tools-grid">
-        <ToolTileComponent v-for="tool in tools" :key="tool.id" :tool="tool" />
-      </main>
+
+      <router-view />
     </div>
   </div>
 </template>
@@ -17,19 +16,18 @@
 <script>
 import SidebarComponent from './components/SidebarComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
-import ToolTileComponent from './components/ToolTileComponent.vue';
 
 export default {
   name: 'App',
   components: {
     SidebarComponent,
     HeaderComponent,
-    ToolTileComponent
   },
   data() {
     return {
       isSidebarCollapsed: false,
       isDarkMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
+      
     };
   },
   methods: {

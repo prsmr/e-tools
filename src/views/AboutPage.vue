@@ -1,7 +1,6 @@
 <template>
   <div class="tool-tile">
-    <router-link :to="'/tools/' + tool.name"><h3>{{ tool.name }}</h3></router-link>
-    <p>{{ tool.description }}</p>
+    Hello
   </div>
 </template>
 
