@@ -102,19 +102,12 @@ export default {
 </script>
 
 <style scoped>
-/* Die Grid-Layout-Styles bleiben unverändert */
 .tools-grid {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 20px;
 }
-
-/*.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}*/
 
 .tools-grid a {
   text-decoration: none;
@@ -168,7 +161,7 @@ export default {
 }
 
 .tool-tile:hover {
-  border: 1px solid #0578ff;
+  border: 1px solid #30d9ff;
 }
 
 .tool-icon i {

@@ -60,44 +60,5 @@ a {
 }
 
 a:hover {
-  color: #007cef;
+  color: #30d9ff;
 }
-
-/* Grundlegende Styles für das Layout 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-}
-
-.dark-mode {
-  background-color: #151718;
-  color: #ffffff;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #1a1d1e;
-  padding: 15px;
-}
-
-.tool-tile {
-  background-color: #fff;
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  display: inline-block;
-}
-
-header {
-  background-color: #0578ff;
-  color: white;
-  padding: 15px;
-}
-
-footer {
-  margin-top: 10px;
-  font-size: 12px;
-  text-align: center;
-}
-
-*/

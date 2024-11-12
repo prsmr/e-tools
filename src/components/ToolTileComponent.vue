@@ -24,7 +24,7 @@ export default {
 }
 
 .tool-tile:hover {
-  border-color: #0578ff;
+  border-color: #30d9ff;
 }
 
 router-link {
