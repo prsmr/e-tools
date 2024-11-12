@@ -1,0 +1,103 @@
+/* main.css */
+
+/* Farbvariablen für Hell- und Dunkelmodus */
+:root {
+  --header-bg: #f8f9fa;
+  --header-text: #333;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #333;
+  --tile-bg: #f1f1f1;
+  --tile-border: #ccc;
+  --main-content-bg: #ffffff;
+}
+
+.dark {
+  --header-bg: #333;
+  --header-text: #f8f9fa;
+  --sidebar-bg: #222;
+  --sidebar-text: #f8f9fa;
+  --tile-bg: #333;
+  --tile-border: #555;
+  --main-content-bg: #1e1e1e;
+}
+
+/* Grundlegendes Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--main-content-bg);
+  color: var(--header-text);
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--main-content-bg);
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kacheln pro Zeile */
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-grid {
+    grid-template-columns: 1fr; /* 1 Kachel pro Zeile */
+  }
+}
+
+a {
+ color: #0578ff;
+}
+
+a:hover {
+  color: #007cef;
+}
+
+/* Grundlegende Styles für das Layout 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.dark-mode {
+  background-color: #151718;
+  color: #ffffff;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1a1d1e;
+  padding: 15px;
+}
+
+.tool-tile {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+header {
+  background-color: #0578ff;
+  color: white;
+  padding: 15px;
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+*/
